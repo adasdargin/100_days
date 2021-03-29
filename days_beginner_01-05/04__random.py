@@ -1,6 +1,6 @@
 import random
 
-random_integer = random.randint(1, 10)
+random_integer = random.randint(1, 10) #duoda skaičių nuo 1 iki 10 įskaitant 10
 print(random_integer)
 
 
