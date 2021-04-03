@@ -1,0 +1,26 @@
+have -> attributes - is basically a variable associated with modelled object.
+is_holding_plate = True
+tables_responsible = [4, 5, 6]
+
+do -> methods - these are functions a particular modelled object can do.
+def take_order(table, order)
+    #takes order to chef
+
+def take_payment(amount)
+    #add money to restaurant
+
+
+class is a blueprint, so we can generate multiple version of an object.
+class Waiter():
+object -> Henry
+object -> Betty
+
+# object - # class
+# car = CarBlueprint()
+
+
+#object  #attribute
+car.speed
+
+#object  #method
+car.stop()

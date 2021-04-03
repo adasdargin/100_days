@@ -1,0 +1,19 @@
+display art
+
+generate random account
+
+format the account data into printable format
+
+ask user for guess
+
+check if user is correct
+	get the follower account of each account
+	use if statement to check if user is correct
+
+giver user feedback on their guess
+
+score keeping
+
+make the game repeatable
+
+making the accounts at position B become the next account at position A.
