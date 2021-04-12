@@ -6,6 +6,13 @@
 
 # or
 
+# aliasing modules
+# import turtle as t
+#timmy = t.Turtle()
+
+# or
+
+# keyword / Module name/ keyword/ Module thing
 from turtle import Turtle, Screen
 timmy = Turtle()
 print(timmy)
