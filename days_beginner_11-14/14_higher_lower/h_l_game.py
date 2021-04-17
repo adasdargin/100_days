@@ -25,11 +25,11 @@ def check_answer(guess, a_followers, b_followers):
     else:
         return guess == "b"
 
+
 def game():
     print(logo)
     score = 0
     game_should_continue = True
-    account_a = get_random_data()
     account_b = get_random_data()
 
     while game_should_continue:
