@@ -1,0 +1,8 @@
+to write - json.dump()
+mode "w"
+
+to read - json.load()
+mode "r"
+
+to update - json.update()
+mode "r"

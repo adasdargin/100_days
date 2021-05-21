@@ -30,7 +30,7 @@ import random
 game_images = [rock, paper, scissors]
 print("Let's play rock-paper-scissors game.")
 user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors: "))
-if user_choice >=3 or user_choice < 0:
+if user_choice >= 3 or user_choice < 0:
     print("You typed an invalid number, you lose")
 else:
     print(f"You chose: {game_images[user_choice]}")

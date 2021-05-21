@@ -1,0 +1,9 @@
+new_list = [new_item for item in list]
+
+new_list = [new_item for item in list if test]
+
+Python Sequences
+list
+range
+string
+tuple
