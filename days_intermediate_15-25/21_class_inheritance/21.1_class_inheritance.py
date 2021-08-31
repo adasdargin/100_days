@@ -17,7 +17,7 @@ class Fish(Animal):
     #     super().__init__()
 
     def breathe(self):
-        super().breathe()
+        super().breathe()       # takes breathe method from class Animal
         print("diving deep")
 
     def swim(self):

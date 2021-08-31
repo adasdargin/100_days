@@ -76,9 +76,6 @@ def find_password():
     finally:
         website_input.delete(0, END)
 
-
-
-
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Password manager")
@@ -108,7 +105,6 @@ add_button.grid(row=4, column=1, columnspan=2)
 
 search_button = Button(text="Search", width=13, command=find_password)
 search_button.grid(row=1, column=2)
-
 
 # inputs
 website_input = Entry(width=21)

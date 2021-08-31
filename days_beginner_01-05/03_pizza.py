@@ -15,7 +15,7 @@ if add_pepperoni == "Y":
     if pizza_size == "S":
         bill += 2
     else:
-        bill +=3
+        bill += 3
 
 if extra_cheese == "Y":
     bill += 1

@@ -44,7 +44,6 @@ def start_timer():
         count_down(work_sec)
         title_label.config(text="Work", fg=GREEN)
 
-
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 
 def count_down(count):
@@ -63,8 +62,6 @@ def count_down(count):
             global work_reps
             work_reps += 1
             check_label.config(text=f"{'✔' * work_reps}")
-
-
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
