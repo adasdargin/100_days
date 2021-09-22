@@ -1,0 +1,6 @@
+HTTP Requests
+
+get reguests.get()
+post
+put
+delete
