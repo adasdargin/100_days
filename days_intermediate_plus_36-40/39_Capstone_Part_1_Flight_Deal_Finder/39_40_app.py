@@ -16,8 +16,6 @@ sheet_data = data_mananager.get_sheet_data()
 if sheet_data[0]['iataCode'] == "":
     for row in sheet_data:
         row["iataCode"] = flight_search.get_destination_code(row['city'])
-    print(sheet_data)
-
     data_mananager.update_destination_codes()
     data_mananager.destination_data = sheet_data
 
@@ -32,12 +30,24 @@ for destination in sheet_data:
         six_months_from_now
     )
 
-    try:
-        if flight.price < destination['lowestPrice']:
-            notification_manager.send_message(
-                message=f"Low price alert! Only €{flight.price} to fly from "
-                        f"{flight.origin_city}-{flight.origin_airport} to "
-                        f"{flight.destination_city}-{flight.destination_airport}, from "
-                        f"{flight.departure_date} to {flight.return_date}.")
-    except AttributeError:
-        pass
+    if flight is None:
+        continue
+
+    if flight.price < destination['lowestPrice']:
+
+        users = data_mananager.get_customer_emails()
+        emails = [row['email'] for row in users]
+
+        message = f"Low price alert! Only €{flight.price} " \
+                f"to fly from {flight.origin_city}-{flight.origin_airport} " \
+                f"to {flight.destination_city}-{flight.destination_airport}, " \
+                f"from {flight.departure_date} to {flight.return_date}."
+
+        if flight.stop_overs > 0:
+            message += f"\nFlight has {flight.stop_overs} stop over, via {flight.via_city} City."
+
+        # notification_manager.send_message(message)
+
+        link = f"https://www.google.co.uk/flights?hl=en#flt={flight.origin_airport}.{flight.destination_airport}.{flight.departure_date}*{flight.destination_airport}.{flight.origin_airport}.{flight.return_date}"
+        notification_manager.send_emails(emails, message, link)
+
