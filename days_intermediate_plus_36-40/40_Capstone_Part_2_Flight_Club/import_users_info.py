@@ -1,7 +1,7 @@
 import os
 import requests
 
-SHEETY_USERS_ENDPOINT = "https://api.sheety.co/44aeae7e838c80c9d9cb7f7de0b417fc/flightDeals/users/"
+SHEETY_USERS_ENDPOINT = os.environ['SHEETY_USERS_ENDPOINT']
 
 print(f"Welcome to ADA Flight Club\nWe find the best flight deals and email you.")
 first_name = input("What's your first name?\n")
